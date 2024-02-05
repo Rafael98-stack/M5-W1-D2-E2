@@ -1,17 +1,17 @@
 package it.be.epicode.EsercizioUno.Entities;
 
-public class Toppings extends  Commons{
+public class Drink extends Commons{
 
-    public Toppings() {
+    public Drink() {
     }
 
-    public Toppings(String name, int prezzo, int calorie) {
+    public Drink(String name, int prezzo, int calorie) {
         super(name, prezzo, calorie);
     }
 
     @Override
     public String toString() {
-        return "Toppings{" +
+        return "Drink{" +
                 "name='" + name + '\'' +
                 ", prezzo=" + prezzo +
                 ", calorie=" + calorie +
