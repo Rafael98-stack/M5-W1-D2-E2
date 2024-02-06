@@ -15,7 +15,7 @@ private List<Drink> drinks;
         this.drinks = drinks;
     }
 
-    public void stampaMenu() {
+    public void getMenu() {
         System.out.println("******* Menu *******");
         System.out.println("PIZZAS");
         this.pizzas.forEach(System.out::println);

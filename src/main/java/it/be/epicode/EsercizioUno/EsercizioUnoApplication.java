@@ -1,5 +1,6 @@
 package it.be.epicode.EsercizioUno;
 
+import it.be.epicode.EsercizioUno.Entities.Menu;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -25,10 +26,9 @@ public class EsercizioUnoApplication {
 		System.out.println("RISTORANTE 'PASTICCIO E PASTICCIATO'");
 		System.out.println("MENU': ");
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(EsercizioUnoApplication.class);
-
 		Menu m = (Menu) ctx.getBean("menu");
 
-	m.stampamenu();
+		m.getMenu();
 		ctx.close();
 	}
 
