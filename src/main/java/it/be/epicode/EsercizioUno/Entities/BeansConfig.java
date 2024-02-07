@@ -41,6 +41,19 @@ public class BeansConfig {
         return new Toppings("Pancetta",3,25);
     }
 
+    @Bean(name = "tuttiToppings")
+   List<Toppings> tuttiTopping () {
+        List<Toppings> tuttiTopping = new ArrayList<>();
+        tuttiTopping.add(toppingsMozzarella());
+        tuttiTopping.add(toppingsBufala());
+        tuttiTopping.add(toppingsAlici());
+        tuttiTopping.add(toppingsPancetta());
+        tuttiTopping.add(toppingsBasilitco());
+        tuttiTopping.add(toppingsPomodoro());
+        tuttiTopping.add(toppingsFormaggio());
+        return tuttiTopping;
+    };
+
     ///////////////////////////////////////
     @Bean(name = "pizzaMargherita")
     Pizza getPizzaMargherita() {
@@ -80,20 +93,19 @@ return new Pizza("PizzaMargherita",toppings);
 //
 //    return new Menu(pizzas,drinks);
 //    }
-//@Bean(name = "menuTest")
-//    Menu menu2 () {
-//        List<Toppings> toppings = new ArrayList<>();
-//        List<Pizza> pizzas = new ArrayList<>();
-//        List<Drink> drinks = new ArrayList<>();
-//
-//        pizzas.add(getPizzaMargherita());
-//        toppings.add(toppingsPomodoro());
-//        toppings.add(toppingsBasilitco());
-//        toppings.add(toppingsMozzarella());
-//        drinks.add(cocaCola());
-//
-//        return new Menu(toppings,pizzas,drinks);
-//    }
+@Bean(name = "menuTest")
+    Menu menu2 () {
+//        List<Toppings> toppings = List.of(tuttiTopping().get(1)); se vogliamo prendere solo un elemento della lista a nostra scelta
+    List<Toppings> toppings = new ArrayList<>(tuttiTopping());
+        List<Pizza> pizzas = new ArrayList<>();
+        List<Drink> drinks = new ArrayList<>();
+
+        pizzas.add(getPizzaMargherita());
+
+        drinks.add(cocaCola());
+
+        return new Menu(toppings,pizzas,drinks);
+    }
 
     @Bean
     Persone marco() {

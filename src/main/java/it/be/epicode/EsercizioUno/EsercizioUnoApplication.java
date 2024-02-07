@@ -26,9 +26,9 @@ public class EsercizioUnoApplication {
 		System.out.println("MENU': ");
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(EsercizioUnoApplication.class);
 		Menu m = (Menu) ctx.getBean(Menu.class);
-//		m.getMenu();
-		System.out.println(m);
-		System.out.println();
+		m.getMenu();
+//		System.out.println(m);
+//		System.out.println();
 //		Tavolo t = (Tavolo) ctx.getBean("tavolo1");
 //		Menu m1 = (Menu) ctx.getBean("ordineAlTavolo");
 //	System.out.println(t);

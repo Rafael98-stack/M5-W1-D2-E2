@@ -7,11 +7,7 @@ import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-@Component
-@Getter
-@Setter
-@ToString
-@AllArgsConstructor
+
 public class Menu {
 private List<Toppings> toppings;
 
@@ -32,30 +28,30 @@ private List<Drink> drinks;
         this.drinks = drinks;
     }
 
-//    public void getMenu() {
-//        System.out.println("******* Menu *******");
-//        System.out.println("PIZZAS");
-//        this.pizzas.forEach(System.out::println);
-//        System.out.println();
-//
-//        System.out.println("TOPPINGS");
-//        this.toppings.forEach(System.out::println);
-//        System.out.println();
-//
-//        System.out.println("DRINKS");
-//        this.drinks.forEach(System.out::println);
-//        System.out.println();
-//    }
-//
-//    public void getOrdine() {
-//        System.out.println("******* Menu *******");
-//        System.out.println("PIZZAS");
-//        this.pizzas.forEach(System.out::println);
-//        System.out.println();
-//
-//        System.out.println("DRINKS");
-//        this.drinks.forEach(System.out::println);
-//        System.out.println();
-//    }
+    public void getMenu() {
+        System.out.println("******* Menu *******");
+        System.out.println("PIZZAS");
+        this.pizzas.forEach(System.out::println);
+        System.out.println();
+
+        System.out.println("TOPPINGS");
+        this.toppings.forEach(System.out::println);
+        System.out.println();
+
+        System.out.println("DRINKS");
+        this.drinks.forEach(System.out::println);
+        System.out.println();
+    }
+
+    public void getOrdine() {
+        System.out.println("******* Menu *******");
+        System.out.println("PIZZAS");
+        this.pizzas.forEach(System.out::println);
+        System.out.println();
+
+        System.out.println("DRINKS");
+        this.drinks.forEach(System.out::println);
+        System.out.println();
+    }
 
 }
