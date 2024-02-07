@@ -3,6 +3,7 @@ package it.be.epicode.EsercizioUno.Entities;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,7 +95,8 @@ return new Pizza("PizzaMargherita",toppings);
 //    return new Menu(pizzas,drinks);
 //    }
 @Bean(name = "menuTest")
-    Menu menu2 () {
+@Scope("prototype")
+    Menu menu () {
 //        List<Toppings> toppings = List.of(tuttiTopping().get(1)); se vogliamo prendere solo un elemento della lista a nostra scelta
     List<Toppings> toppings = new ArrayList<>(tuttiTopping());
         List<Pizza> pizzas = new ArrayList<>();

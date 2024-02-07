@@ -1,8 +1,13 @@
 package it.be.epicode.EsercizioUno.Entities;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
-
+@Getter
+@Setter
+@ToString
 public class Persone {
     String Nome;
     String Cognome;
@@ -15,27 +20,5 @@ public class Persone {
         Cognome = cognome;
     }
 
-    public String getNome() {
-        return Nome;
-    }
 
-    public void setNome(String nome) {
-        Nome = nome;
-    }
-
-    public String getCognome() {
-        return Cognome;
-    }
-
-    public void setCognome(String cognome) {
-        Cognome = cognome;
-    }
-
-    @Override
-    public String toString() {
-        return "Persone{" +
-                "Nome='" + Nome + '\'' +
-                ", Cognome='" + Cognome + '\'' +
-                '}';
-    }
 }

@@ -7,7 +7,9 @@ import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@ToString
+@Setter
+@Getter
 public class Menu {
 private List<Toppings> toppings;
 
